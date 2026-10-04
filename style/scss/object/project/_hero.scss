@@ -16,13 +16,12 @@ project > hero
 
 .p-hero {
   width: 100%;
-  margin-top: 20px;
-  padding-bottom: 64px;
+  margin-bottom: 48px;
   position: relative;
-
+  isolation: isolate;
+  margin-top: clamp(80px, calc(10vw + 40.34px), 140px);
   @include g.mq() {
-    margin-top: clamp(20px, calc(14vw - 32.88px), 100px);
-    padding-bottom: 115px;
+    margin-bottom: 88px;
   }
 }
 
@@ -75,6 +74,7 @@ project > hero
   margin-bottom: 50px;
 
   position: relative;
+  isolation: isolate;
 
   @include g.mq() {
     padding-top: 16px;

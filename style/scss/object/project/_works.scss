@@ -15,7 +15,7 @@ project > works
 */
 
 .p-works {
-  padding-top: 64px;
+  padding-top: 72px;
 }
 .p-works_work {
   @include g.mq() {
@@ -54,6 +54,7 @@ project > works
   padding-left: 22px;
 
   position: relative;
+  isolation: isolate;
 
   @include g.mq() {
     grid-row: 1/2;
@@ -129,9 +130,9 @@ project > works
 }
 
 .p-works_work-intro {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   @include g.mq() {
-    margin-bottom: 100px;
+    margin-bottom: 88px;
     margin-left: 0;
     margin-right: 12.94%;
   }

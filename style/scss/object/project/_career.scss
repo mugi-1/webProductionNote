@@ -14,10 +14,10 @@ project > career
   }
 */
 .p-career {
-  padding-top: 64px;
-  margin-bottom: 96px;
+  padding-top: 72px;
+  margin-bottom: 48px;
   @include g.mq() {
-    margin-bottom: 128px;
+    margin-bottom: 88px;
   }
 }
 

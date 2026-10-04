@@ -9,7 +9,6 @@ body {
   letter-spacing: 0.02em;
   color: $color-text;
   font-family: $font-family-base;
-  overflow-x: hidden;
 
   @media (min-width: $breakpoint-sp) {
     font-size: 20px;

@@ -15,13 +15,16 @@ project > skill
 */
 
 .p-skill {
-  padding-top: 64px;
+  padding-top: 72px;
+  margin-bottom: 48px;
+  @include g.mq() {
+    margin-bottom: 88px;
+  }
 }
 
 .p-skill-contents {
   width: 100%;
   padding-inline: 16px;
-  margin-bottom: 64px;
 }
 
 .p-skill-list {
