@@ -1,0 +1,111 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/breakpoints" as g;
+/*!
+project > skill
+------------------------------
+*/
+/*
+  @media (any-hover: hover) {
+    &:hover {
+
+    }
+  }
+  @include g.mq() {
+  }
+*/
+
+.p-skill {
+  padding-top: 64px;
+}
+
+.p-skill-contents {
+  width: 100%;
+  padding-inline: 16px;
+  margin-bottom: 64px;
+}
+
+.p-skill-list {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-inline: auto;
+  padding: 30px 30px;
+  border: 1px solid $color-grid-light;
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent calc($grid-sp - 1px),
+      $color-grid-light calc($grid-sp - 1px),
+      $color-grid-light $grid-sp,
+      transparent $grid-sp
+    ),
+    linear-gradient(
+      to right,
+      transparent calc($grid-sp - 1px),
+      $color-grid-light calc($grid-sp - 1px),
+      $color-grid-light $grid-sp,
+      transparent $grid-sp
+    );
+  background-size: $grid-sp $grid-sp;
+
+  @include g.mq() {
+    max-width: 1000px;
+    padding: 60px 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent calc($grid-pc - 1px),
+        $color-grid-light calc($grid-pc - 1px),
+        $color-grid-light $grid-pc,
+        transparent $grid-pc
+      ),
+      linear-gradient(
+        to right,
+        transparent calc($grid-pc - 1px),
+        $color-grid-light calc($grid-pc - 1px),
+        $color-grid-light $grid-pc,
+        transparent $grid-pc
+      );
+    background-size: $grid-pc $grid-pc;
+  }
+}
+
+.p-skill-item {
+  border-bottom: 1px solid $color-text;
+  width: 100%;
+
+  @include g.mq() {
+    width: 47.15%;
+    padding-bottom: 22px;
+    &:nth-child(even) {
+      padding-top: 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.p-skill-name {
+  font-size: 20px;
+  @include g.mq() {
+    font-size: 24px;
+  }
+
+  font-weight: $fw-semi-bold;
+}
+
+.p-skill-capability {
+  font-size: 16px;
+  @include g.mq() {
+    font-size: 20px;
+  }
+}

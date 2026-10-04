@@ -1,0 +1,41 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/breakpoints" as g;
+/*!
+component > section-title
+------------------------------
+*/
+/*
+  @media (any-hover: hover) {
+    &:hover {
+
+    }
+  }
+  @include g.mq() {
+  }
+*/
+.c-section-title {
+  font-family: $font-family-en;
+
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+
+  @include g.mq() {
+    gap: 24px;
+  }
+}
+
+.c-section-title_number {
+  font-size: 64px;
+  color: $color-accent;
+  @include g.mq() {
+    font-size: 96px;
+  }
+}
+.c-section-title_text {
+  text-transform: uppercase;
+  font-size: 40px;
+  @include g.mq() {
+    font-size: 64px;
+  }
+}

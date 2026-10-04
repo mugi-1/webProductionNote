@@ -1,0 +1,17 @@
+@use "../foundation/variables" as *;
+@use "../foundation/breakpoints" as g;
+
+/*!
+layout > container
+------------------------------
+*/
+
+.l-container {
+  padding-inline: 20px;
+  margin-inline: auto;
+
+  @include g.mq() {
+    padding-inline: clamp(20px, calc(14.88vw - 94.28px), 200px);
+    max-width: 1440px;
+  }
+}

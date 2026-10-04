@@ -1,0 +1,107 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/breakpoints" as g;
+/*!
+project > career
+------------------------------
+*/
+/*
+  @media (any-hover: hover) {
+    &:hover {
+
+    }
+  }
+  @include g.mq() {
+  }
+*/
+.p-carreer {
+  padding-top: 64px;
+  margin-bottom: 96px;
+  @include g.mq() {
+    margin-bottom: 128px;
+  }
+}
+
+.p-career-contents {
+  width: 100%;
+  padding-inline: clamp(10px, calc(17vw - 56.1px), 110px);
+}
+
+.p-career-list {
+  border-left: 4px solid $color-accent;
+  padding-top: 74px;
+}
+
+.p-career-item {
+  border-top: 2px dashed $color-grid-dark;
+  width: 90%;
+  padding-top: 32px;
+  padding-left: 40px;
+  position: relative;
+  counter-increment: item-number;
+
+  &:nth-child(1) {
+    padding-bottom: 150px;
+    @include g.mq() {
+      padding-bottom: 230px;
+    }
+  }
+  &:nth-child(2) {
+    padding-bottom: 70px;
+    @include g.mq() {
+      padding-bottom: 106px;
+    }
+  }
+  &:nth-child(3) {
+    padding-bottom: 50px;
+    @include g.mq() {
+      padding-bottom: 80px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $color-accent;
+
+    position: absolute;
+    top: -11px;
+    left: -11px;
+  }
+
+  &::after {
+    content: counter(item-number);
+    position: absolute;
+    display: grid;
+    place-items: center;
+
+    font-weight: $fw-semi-bold;
+    line-height: 1;
+    border: 2px solid $color-text;
+    border-radius: 50%;
+
+    font-size: 26px;
+    width: 52px;
+    height: 52px;
+    right: -52px;
+    top: -26px;
+
+    @include g.mq() {
+      font-size: 32px;
+      width: 64px;
+      height: 64px;
+      right: -64px;
+      top: -32px;
+    }
+  }
+}
+
+.p-career-name {
+  font-weight: $fw-semi-bold;
+  font-size: 24px;
+  @include g.mq() {
+    font-size: 32px;
+  }
+}

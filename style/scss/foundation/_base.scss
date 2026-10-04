@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "breakpoints" as g;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.7;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: $color-text;
+  font-family: $font-family-base;
+  overflow-x: hidden;
+
+  @media (min-width: $breakpoint-sp) {
+    font-size: 20px;
+  }
+}

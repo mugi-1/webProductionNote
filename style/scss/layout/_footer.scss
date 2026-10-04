@@ -1,0 +1,19 @@
+@use "../foundation/variables" as *;
+@use "../foundation/breakpoints" as g;
+
+/*!
+layout > footer
+------------------------------
+*/
+
+.l-footer {
+  width: 100%;
+  border-top: 2px solid $color-grid-dark;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding-block: 32px;
+  @include g.mq() {
+    font-size: 16px;
+  }
+}

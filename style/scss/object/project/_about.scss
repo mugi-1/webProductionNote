@@ -1,0 +1,126 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/breakpoints" as g;
+/*!
+project > about
+------------------------------
+*/
+/*
+  @media (any-hover: hover) {
+    &:hover {
+
+    }
+  }
+  @include g.mq() {
+  }
+*/
+
+.p-about {
+  @include g.mq() {
+    //padding-inline: 47px;
+    padding-top: 40px;
+    padding-bottom: 96px;
+  }
+}
+.p-about-contents {
+  @include g.mq() {
+    padding-inline: 64px;
+  }
+}
+
+.p-about_catch {
+  width: fit-content;
+  margin-left: auto;
+  font-weight: $fw-medium;
+  margin-bottom: 35px;
+
+  span {
+    color: $color-white;
+    background-color: $color-text;
+  }
+
+  @include g.mq() {
+    margin-bottom: 20px;
+  }
+}
+
+.p-about_name {
+  font-weight: $fw-semi-bold;
+  margin-bottom: 10px;
+  @include g.mq() {
+    margin-bottom: 16px;
+  }
+}
+
+.p-about-role {
+  display: inline-block;
+
+  line-height: 1.2;
+  margin-bottom: 32px;
+  @include g.mq() {
+    margin-bottom: 20px;
+  }
+  span {
+    background-color: $color-accent;
+    padding: 2px 4px 2px 4px;
+  }
+}
+
+.p-about-text {
+  width: 100%;
+  padding: 16px 20px;
+  margin-inline: auto;
+  margin-bottom: 23px;
+  font-size: 16px;
+  line-height: 2;
+
+  border: 1px solid $color-grid-light;
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent calc($grid-s-sp - 1px),
+      $color-grid-light calc($grid-s-sp - 1px),
+      $color-grid-light $grid-s-sp,
+      transparent $grid-s-sp
+    ),
+    linear-gradient(
+      to right,
+      transparent calc($grid-s-sp - 1px),
+      $color-grid-light calc($grid-s-sp - 1px),
+      $color-grid-light $grid-s-sp,
+      transparent $grid-s-sp
+    );
+  background-size: $grid-s-sp $grid-s-sp;
+
+  @include g.mq() {
+    width: 640px;
+    margin-left: 0;
+    font-size: 20px;
+    padding: 40px 54px;
+    margin-bottom: 20px;
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent calc($grid-pc - 1px),
+        $color-grid-light calc($grid-pc - 1px),
+        $color-grid-light $grid-pc,
+        transparent $grid-pc
+      ),
+      linear-gradient(
+        to right,
+        transparent calc($grid-pc - 1px),
+        $color-grid-light calc($grid-pc - 1px),
+        $color-grid-light $grid-pc,
+        transparent $grid-pc
+      );
+    background-size: $grid-pc $grid-pc;
+  }
+}
+
+.p-about-text--right {
+  @include g.mq() {
+    margin-right: 0;
+    margin-left: auto;
+    padding-right: 107px;
+    width: 520px;
+  }
+}

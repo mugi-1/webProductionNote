@@ -1,0 +1,44 @@
+@use "../foundation/variables" as *;
+@use "../foundation/breakpoints" as g;
+/*!
+layout > header
+------------------------------
+*/
+/*
+  @media (any-hover: hover) {
+    &:hover {
+
+    }
+  }
+  @include g.mq() {
+  }
+*/
+.l-header {
+  width: 100%;
+  //position: fixed;
+  //z-index: $z-index-header;
+}
+
+.l-header-menu-list {
+  margin-inline: auto;
+  padding-top: clamp(15px, calc(5vw - 5.49px), 46px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $font-family-en;
+  gap: clamp(24px, calc(13vw - 26.24px), 100px);
+  font-size: clamp(20px, calc(3vw + 9.42px), 36px);
+}
+
+.l-header-menu-link {
+  text-transform: uppercase;
+  border-bottom: 4px solid $color-text;
+  transition: border-bottom 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-bottom: 4px solid $color-accent;
+    }
+  }
+}

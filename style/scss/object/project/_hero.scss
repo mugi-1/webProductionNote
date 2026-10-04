@@ -1,0 +1,246 @@
+@use "../../foundation/variables" as *;
+@use "../../foundation/breakpoints" as g;
+/*!
+project > hero
+------------------------------
+*/
+/*
+  @media (any-hover: hover) {
+    &:hover {
+
+    }
+  }
+  @include g.mq() {
+  }
+*/
+
+.p-hero {
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 64px;
+  position: relative;
+
+  @include g.mq() {
+    margin-top: clamp(20px, calc(14vw - 32.88px), 100px);
+    padding-bottom: 115px;
+  }
+}
+
+.p-hero-contents {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family-en;
+}
+
+.p-hero-title {
+  font-size: 64px;
+  line-height: 100%;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 268px;
+  text-transform: uppercase;
+
+  @include g.mq() {
+    padding-top: 42px;
+    padding-left: 56px;
+    padding-bottom: 10px;
+    font-size: 128px;
+  }
+}
+
+.p-hero-page-title {
+  text-transform: uppercase;
+  line-height: 1;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.p-hero-deco1 {
+  display: block;
+  font-size: clamp(24px, calc(3vw + 13.42px), 40px);
+  padding-bottom: 10px;
+
+  @include g.mq() {
+    padding-bottom: 20px;
+  }
+}
+
+.p-hero-deco2 {
+  display: block;
+  width: 100%;
+  font-size: clamp(40px, calc(4vw + 24.14px), 64px);
+  text-align: right;
+  padding-top: 15px;
+  margin-bottom: 50px;
+
+  position: relative;
+
+  @include g.mq() {
+    padding-top: 16px;
+    margin-bottom: 88px;
+  }
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 18px;
+    background-color: $color-accent;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    z-index: $z-index-negative;
+    @include g.mq() {
+      height: 32px;
+      bottom: 14px;
+    }
+  }
+}
+
+.p-hero-text {
+  margin-left: 0;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(20px, calc(2vw + 12.07px), 32px);
+  line-height: 1.2;
+  gap: 20px;
+
+  @include g.mq() {
+    margin-inline: 0;
+    padding-left: 54.33%;
+    gap: 32px;
+  }
+}
+
+.p-hero-grid {
+  position: absolute;
+  top: 0;
+  left: clamp(20px, calc(14.88vw - 94.28px), 200px);
+  z-index: $z-index-negative;
+
+  width: 210px;
+  height: 330px;
+  border: 1px solid $color-grid-dark;
+  background-image:
+    linear-gradient(
+      to bottom,
+      transparent calc($grid-sp - 1px),
+      $color-grid-dark calc($grid-sp - 1px),
+      $color-grid-dark $grid-sp,
+      transparent $grid-sp
+    ),
+    linear-gradient(
+      to right,
+      transparent calc($grid-sp - 1px),
+      $color-grid-dark calc($grid-sp - 1px),
+      $color-grid-dark $grid-sp,
+      transparent $grid-sp
+    );
+  background-size: $grid-sp $grid-sp;
+
+  @include g.mq() {
+    width: 280px;
+    height: 520px;
+
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent calc($grid-pc - 1px),
+        $color-grid-dark calc($grid-pc - 1px),
+        $color-grid-dark $grid-pc,
+        transparent $grid-pc
+      ),
+      linear-gradient(
+        to right,
+        transparent calc($grid-pc - 1px),
+        $color-grid-dark calc($grid-pc - 1px),
+        $color-grid-dark $grid-pc,
+        transparent $grid-pc
+      );
+    background-size: $grid-pc $grid-pc;
+  }
+}
+
+.p-hero-grid_brace {
+  position: absolute;
+  font-family: $font-family-en;
+  line-height: 1;
+  font-size: 32px;
+
+  @include g.mq() {
+    font-size: 48px;
+  }
+}
+
+.p-hero-grid_brace--open {
+  top: 95px;
+  left: 5px;
+  @include g.mq() {
+    top: 169px;
+    left: 10px;
+  }
+}
+
+.p-hero-grid_brace--close {
+  bottom: 5px;
+  right: 5px;
+  @include g.mq() {
+    bottom: 6px;
+    right: 10px;
+  }
+}
+
+.p-hero-grid_rect {
+  position: absolute;
+  background-color: $color-text;
+}
+
+.p-hero-grid_rect01 {
+  aspect-ratio: 2/1;
+  width: calc($grid-sp * 2);
+  left: 90px;
+  top: 120px;
+  background-color: $color-accent;
+  @include g.mq() {
+    width: calc($grid-pc * 2);
+    left: 120px;
+    top: 160px;
+  }
+}
+
+.p-hero-grid_rect02 {
+  width: $grid-sp;
+  aspect-ratio: 1/1;
+  right: 0;
+  top: 150px;
+  @include g.mq() {
+    width: $grid-pc;
+    top: 240px;
+  }
+}
+
+.p-hero-grid_rect03 {
+  width: $grid-sp;
+  aspect-ratio: 1/1;
+  background-color: $color-accent;
+  left: 60px;
+  top: 210px;
+  @include g.mq() {
+    aspect-ratio: 1/2;
+    width: $grid-pc;
+    left: 80px;
+    top: 280px;
+  }
+}
+.p-hero-grid_rect04 {
+  aspect-ratio: 2/1;
+  width: calc($grid-sp * 2);
+  left: 30px;
+  top: 270px;
+  @include g.mq() {
+    width: calc($grid-pc * 2);
+    left: 40px;
+    top: 400px;
+  }
+}
