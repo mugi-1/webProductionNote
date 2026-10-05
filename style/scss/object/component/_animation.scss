@@ -15,11 +15,11 @@ component > animation
 */
 
 .c-animation-default {
-  transform: translateY(-60px);
+  transform: translateY(60px);
   opacity: 0;
   transition:
-    transform 0.6s ease,
-    opacity 0.6s ease;
+    opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .c-animation-show {
