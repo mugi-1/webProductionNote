@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Web制作・コーディングの制作実績をまとめたポートフォリオサイトです。"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans+JP:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans+JP:wght@100..900&display=block"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style/css/style.css" />
-    <title>Web Production Note</title>
+    <script src="./js/script.js" defer></script>
+    <title>Web Production Note | Portfolio</title>
   </head>
   <body>
-    <header class="l-header l-container">
+    <header class="l-header">
       <nav class="l-header-menu" aria-label="メインナビゲーション">
         <ul class="l-header-menu-list">
           <li class="l-header-menu-item">
@@ -32,7 +38,7 @@
       </nav>
     </header>
     <main>
-      <div class="p-hero l-container">
+      <div class="p-hero l-container js-hero">
         <div class="p-hero-contents">
           <p class="p-hero-title">portfolio</p>
           <h1 class="p-hero-page-title">
@@ -45,7 +51,7 @@
             ><span class="u-br">2026</span>
           </p>
         </div>
-        <div class="p-hero-grid">
+        <div class="p-hero-grid" aria-hidden="true">
           <span class="p-hero-grid_brace p-hero-grid_brace--open"
             >&lbrace;</span
           >
@@ -58,7 +64,10 @@
           >
         </div>
       </div>
-      <section class="p-about l-container" id="about">
+      <section
+        class="p-about l-container c-animation-default js-show"
+        id="about"
+      >
         <h2 class="c-section-title">
           <span class="c-section-title_number">01.</span
           ><span class="c-section-title_text">about</span>
@@ -88,7 +97,10 @@
           </p>
         </div>
       </section>
-      <section class="p-works l-container" id="works">
+      <section
+        class="p-works l-container c-animation-default js-show"
+        id="works"
+      >
         <h2 class="c-section-title">
           <span class="c-section-title_number">02.</span
           ><span class="c-section-title_text">works</span>
@@ -219,7 +231,10 @@
           </div>
         </div>
       </section>
-      <section class="p-skill l-container" id="skill">
+      <section
+        class="p-skill l-container c-animation-default js-show"
+        id="skill"
+      >
         <h2 class="c-section-title">
           <span class="c-section-title_number">03.</span
           ><span class="c-section-title_text">skill</span>
@@ -254,7 +269,10 @@
         </div>
       </section>
 
-      <section class="p-career l-container" id="career">
+      <section
+        class="p-career l-container c-animation-default js-show"
+        id="career"
+      >
         <h2 class="c-section-title">
           <span class="c-section-title_number">04.</span
           ><span class="c-section-title_text">career</span>

@@ -13,3 +13,16 @@ component > animation
   @include g.mq() {
   }
 */
+
+.c-animation-default {
+  transform: translateY(-60px);
+  opacity: 0;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+}
+
+.c-animation-show {
+  transform: translateY(0);
+  opacity: 1;
+}

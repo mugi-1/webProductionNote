@@ -4,15 +4,6 @@
 project > works
 ------------------------------
 */
-/*
-  @media (any-hover: hover) {
-    &:hover {
-
-    }
-  }
-  @include g.mq() {
-  }
-*/
 
 .p-works {
   padding-top: 72px;
@@ -25,12 +16,10 @@ project > works
 .p-works_work-header {
   display: grid;
   grid-template-columns: 1fr;
-  //margin-bottom: 64px;
   margin-bottom: 20px;
   @include g.mq() {
     grid-template-columns: 62.5% 1fr;
     column-gap: 20px;
-    //margin-bottom: 100px;
   }
 }
 
