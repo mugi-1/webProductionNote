@@ -15,6 +15,7 @@ layout > header
 
 .l-header-menu-list {
   margin-inline: auto;
+  margin-bottom: 10px;
   padding-top: clamp(15px, calc(5vw - 5.49px), 46px);
   display: flex;
   justify-content: center;
@@ -23,6 +24,10 @@ layout > header
   font-family: $font-family-en;
   gap: clamp(24px, calc(13vw - 26.24px), 100px);
   font-size: clamp(20px, calc(3vw + 9.42px), 36px);
+
+  @include g.mq() {
+    margin-bottom: 0;
+  }
 }
 
 .l-header-menu-link {

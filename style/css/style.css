@@ -217,6 +217,7 @@ layout > header
 
 .l-header-menu-list {
   margin-inline: auto;
+  margin-bottom: 10px;
   padding-top: clamp(15px, 5vw - 5.49px, 46px);
   display: flex;
   justify-content: center;
@@ -224,6 +225,11 @@ layout > header
   font-family: "Fjalla One", sans-serif;
   gap: clamp(24px, 13vw - 26.24px, 100px);
   font-size: clamp(20px, 3vw + 9.42px, 36px);
+}
+@media screen and (min-width: 768px) {
+  .l-header-menu-list {
+    margin-bottom: 0;
+  }
 }
 
 .l-header-menu-link {
@@ -306,6 +312,78 @@ component > section-title
   }
 }
 
+/*!
+component > button
+------------------------------
+*/
+.c-button {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  padding: 10px 60px 0 10px;
+  margin-bottom: 64px;
+  font-size: 24px;
+  font-family: "Fjalla One", sans-serif;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .c-button {
+    padding-right: 100px;
+    margin-bottom: 100px;
+    font-size: 32px;
+  }
+}
+.c-button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 157px;
+  height: 4px;
+  background-color: #ffe218;
+  transform: scale(1);
+  transform-origin: left;
+  --animation-transform: rotate(0);
+}
+@media screen and (min-width: 768px) {
+  .c-button::before {
+    width: 225px;
+    height: 6px;
+  }
+}
+.c-button::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  right: -1px;
+  width: 18px;
+  height: 4px;
+  background-color: #ffe218;
+  transform: rotate(45deg) scale(1);
+  --animation-transform: rotate(45deg);
+}
+@media screen and (min-width: 768px) {
+  .c-button::after {
+    height: 6px;
+  }
+}
+@media (any-hover: hover) {
+  .c-button:hover::before, .c-button:hover::after {
+    animation: hover-animation 0.5s ease;
+  }
+}
+
+@keyframes hover-animation {
+  0% {
+    transform: var(--animation-transform) scaleX(1);
+  }
+  10% {
+    transform: var(--animation-transform) scaleX(0);
+  }
+  100% {
+    transform: var(--animation-transform) scaleX(1);
+  }
+}
 /*!
 component > animation
 ------------------------------
